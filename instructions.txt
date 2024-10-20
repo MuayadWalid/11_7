@@ -1,0 +1,2 @@
+We hosted the website on one of our personal github accounts using . github . io
+The link to the website is: https://adamy13.github.io/
