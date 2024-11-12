@@ -1,86 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sell Your Car Parts</title>
+    <title>Motorhaven</title>
+    <link rel="stylesheet" type="text/css" href="Sellingparts.css" title="style" />
 </head>
 <body>
+    <div class="header">
+        <h1><span class="highlight">M</span>otor<span class="highlight">H</span>aven</h1>
+    </div>
 
-    <h1>Sell Your Car Parts</h1>
-    <p>Please fill out the form below to list your car part for sale on Motorhaven.</p>
+    <div class="nav">
+        <a href="homepage.html">Home</a>
+        <a href="Filter page.html">Find Parts</a>
+        <a href="Selling parts.html">Sell Parts</a>
+        <a href="Guides&Resources.html">Guide</a>
+        <a href="AboutUsPage.html">Contact</a>
+    </div>
 
-    <form action="#" method="post">
-        <div>
-            <label>Part Name:</label><br>
-            <input  name="part-name" type="text" required placeholder="Enter the name of the part">
-        </div>
-        <br>
+    <div class="container">
+        <p>Please fill out the form below to list your car part for sale on Motorhaven.</p>
 
-        <div>
-            <label>Part Category:</label><br>
-            <select name="category" required>
-                <option disabled selected>Select the category</option>
-                <option>Engine</option>
-                <option>Transmission</option>
-                <option>Suspension</option>
-                <option>Brakes</option>
-                <option>Exhaust</option>
-                <option>Electrical</option>
-                <option>Body</option>
-                <option>Interior</option>
-            </select>
-        </div>
-        <br>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="part-name">Part Name:</label>
+                <input type="text" id="part-name" name="part-name" required placeholder="Enter the name of the part">
+            </div>
 
-        <div>
-            <label>Compatible Make, Model, Year:</label><br>
-            <input name="make-model-year" type="text" required placeholder="Ex., Toyota Corolla 2015">
-        </div>
-        <br>
+            <div class="form-group">
+                <label for="category">Part Category:</label>
+                <select id="category" name="category" required>
+                    <option value="" disabled selected>Select the category</option>
+                    <option value="engine">Engine</option>
+                    <option value="transmission">Transmission</option>
+                    <option value="suspension">Suspension</option>
+                    <option value="brakes">Brakes</option>
+                    <option value="exhaust">Exhaust</option>
+                    <option value="electrical">Electrical</option>
+                    <option value="body">Body</option>
+                    <option value="interior">Interior</option>
+                </select>
+            </div>
 
-        <div>
-            <label>Condition:</label><br>
-            <select name="condition" required>
-                <option disabled selected>Select the condition</option>
-                <option>New</option>
-                <option>Used</option>
-                <option>Both (New, Used)</option>
-            </select>
-        </div>
-        <br>
+            <div class="form-group">
+                <label for="make-model-year">Compatible Make, Model, Year:</label>
+                <input type="text" id="make-model-year" name="make-model-year" required placeholder="e.g., Toyota Corolla 2015">
+            </div>
 
-        <div>
-            <label>Price (AED):</label><br>
-            <input name="price" type="number" placeholder="Enter the price in AED">
-        </div>
-        <br>
+            <div class="form-group">
+                <label for="condition">Condition:</label>
+                <select id="condition" name="condition" required>
+                    <option value="" disabled selected>Select the condition</option>
+                    <option value="new">New</option>
+                    <option value="used">Used</option>
+                    <option value="refurbished">Certified Refurbished</option>
+                </select>
+            </div>
 
-        <div>
-            <label>Description:</label><br>
-            <textarea name="description" rows="5" placeholder="Enter a detailed description of the part"></textarea>
-        </div>
-        <br>
+            <div class="form-group">
+                <label for="price">Price (AED):</label>
+                <input type="number" id="price" name="price" required placeholder="Enter the price in AED">
+            </div>
 
-        <div>
-            <label>Upload Photos:</label><br>
-            <input type="file" id="photo" name="photo" accept="image/*" multiple>
-        </div>
-        <br>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="5" required placeholder="Enter a detailed description of the part"></textarea>
+            </div>
 
-        <div>
-            <label>Location:</label><br>
-            <input type="text" name="location" required placeholder="Enter your city and country">
-        </div>
-        <br>
+            <div class="form-group">
+                <label for="photo">Upload Photos:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" multiple>
+            </div>
 
-        <div>
-            <label>Contact Information:</label><br>
-            <input type="text" name="contact" required placeholder="Enter your email or phone number">
-        </div>
-        <br>
+            <div class="form-group-inline">
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required placeholder="Enter your city and country">
+                </div>
 
-        <input type="submit" value="Submit Listing">
-    </form>
+                <div class="form-group">
+                    <label for="contact">Contact Information:</label>
+                    <input type="text" id="contact" name="contact" required placeholder="Enter your email or phone number">
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Submit Listing</button>
+        </form>
+    </div>
 
 </body>
 </html>
