@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet" type = "text/css" href = "FilterPage.css" title = "style"/>
+
+    <title>MotorHeaven - Car Parts Finder</title>
+	
+
+</head>
+<body>
+<h1><span>M</span>otor<span>H</span>aven</h1>
+<h2>Use the filter to find your needs</h2>
+<br>
+
+    
+
+<p>Welcome to MotorHeaven's Car Parts Finder! Here, you can easily filter through our vast selection of car 
+parts to find exactly what you need. Whether you're looking for engine components, transmission parts, or 
+anything in between, we've got you covered. Simply choose your car's make, model, year, and the part category, 
+and we'll show you all available options. You can also search by part name or number and filter results by condition 
+to find new, used, or refurbished parts. Start exploring and get your vehicle back in top shape with MotorHeaven!</p>
+
+
+<br>
+<br>
+<div class = "container">    
+    <form action=" " method="POST">
+        <!-- Make/Brand -->
+        <div class="form-group">
+            <label>Select Make/Brand:</label>
+            <select id="make" name="make" autofocus>
+                <option value="ford">Ford</option>
+                <option value="chevrolet">Chevrolet</option>
+                <option value="toyota">Toyota</option>
+                <option value="honda">Honda</option>
+                <option value="nissan">Nissan</option>
+                <option value="bmw">BMW</option>
+				<option value =" " selected>Select Car Brand</option>
+            </select>
+        </div>
+        
+
+		<br>
+		<br>
+					
+        <!-- Model -->
+        <div class="form-group">
+            <label for="model">Select Model:</label>
+            <select id="model" name="model">
+                <option value="mustang">Mustang</option>
+                <option value="camaro">Camaro</option>
+                <option value="corolla">Corolla</option>
+                <option value="civic">Civic</option>
+                <option value="altima">Altima</option>
+                <option value="m3">M3</option>
+				<option value =" " selected>Select Car Model</option>
+            </select>
+        </div>
+        
+		<br>
+		<br>
+
+    
+        <!-- Year -->
+        <div class="form-group">
+		<label>Please enter the manufactoring year of your car:</label>	
+            <input type = "year" placeholder = "Enter the car manufactoring year">
+        </div>
+		
+		<br>
+		<br>
+		
+            <!-- Part Category -->
+        <div class="form-group">
+            <label for="category">Select Part Category:</label>
+            <select id="category" name="category">
+                <option value="engine">Engine</option>
+                <option value="transmission">Transmission</option>
+                <option value="brakes">Brakes</option>
+                <option value="suspension">Suspension</option>
+                <option value="exhaust">Exhaust</option>
+                <option value="electrical">Electrical</option>
+            </select>
+        </div>
+		
+		<br>
+		<br>
+        
+		<!-- Condition -->
+        <div class="form-group">
+            <label for="condition">Select Condition:</label>
+            <select id="condition" name="condition">
+                <option value="new">New</option>
+                <option value="used">Used</option>
+                <option value="refurbished">Refurbished</option>
+            </select>
+        </div>
+		<br>
+		<br>
+
+        <!-- Search by Part Name or Number -->
+        <div class="form-group">
+            <label for="search">Search Parts:</label>
+            <input type="text" id="search" name="search" placeholder="Enter part name or number">
+        </div>
+
+		<br>
+		<br>
+		
+		<div class="form-group">
+		<label>Choose a suitbale price range:</label>
+            <input type="range" name="range" 
+			min = 0
+			max = 10000
+        </div>
+		
+		
+		<br>
+		<br>
+				
+        <input type="submit" value="Find Parts" class = "btn">
+		&nbsp
+		&nbsp
+		&nbsp
+		&nbsp
+		&nbsp
+		<input type = "reset" value = "Clear" class = "btn">
+    </form>
+	
+	</div>
+</body>
+</html>
