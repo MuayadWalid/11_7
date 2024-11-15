@@ -1,4 +1,4 @@
-body {
+#body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@ body {
     color: #fff;
 }
 
-.header {
+#header {
     background-color: #fff;
     color: #333;
     padding: 20px 0;
@@ -15,16 +15,16 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.header h1 {
+#header-title {
     margin: 0;
     font-size: 2.5em;
 }
 
-.header .highlight {
+#highlight {
     color: red;
 }
 
-.nav {
+#nav {
     display: flex;
     justify-content: center;
     background-color: #fff;
@@ -33,21 +33,21 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.nav a {
+#nav a {
     color: #333;
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
 }
 
-.nav a:hover {
+#nav a:hover {
     color: red;
 }
 
-.container {
+#container {
     width: 80%;
     margin: 20px auto;
-    background-color: #444; 
+    background-color: #444;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -59,18 +59,18 @@ body {
     color: #ccc;
 }
 
-form {
+#form {
     margin-top: 20px;
 }
 
-label {
+#form label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
     color: #fff;
 }
 
-input, select, textarea {
+#form input, #form select, #form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -81,7 +81,7 @@ input, select, textarea {
     color: #fff;
 }
 
-input:focus, select:focus, textarea:focus {
+#form input:focus, #form select:focus, #form textarea:focus {
     border-color: #fff;
     outline: none;
     background-color: #555;
@@ -106,54 +106,4 @@ input:focus, select:focus, textarea:focus {
 .btn:hover {
     background-color: red;
     color: #fff;
-}
-
-.form-group-inline {
-    display: flex;
-    justify-content: space-between;
-}
-
-.form-group-inline .form-group {
-    flex: 1;
-    margin-right: 10px;
-}
-
-.form-group-inline .form-group:last-child {
-    margin-right: 0;
-}
-
-.form-group-inline input, .form-group-inline select {
-    width: calc(100% - 10px);
-}
-
-.form-group-inline .form-group label {
-    margin-bottom: 10px;
-}
-
-.form-group-inline .form-group input, .form-group-inline .form-group select {
-    margin-bottom: 0;
-}
-
-/* This is for the homepage*/
-#search {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 0;
-}
-#search-bar {
-    padding: 10px;
-    padding-left: 20px;
-    width: 35%;
-    height: 20px;
-    border-radius: 20px;
-    border-color: black;
-    background-color: white;
-    color: black;
-}
-
-#intro {
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 15pt;
 }
