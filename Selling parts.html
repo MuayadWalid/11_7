@@ -3,33 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Selling Parts</title>
-    <link rel="stylesheet" type="text/css" href="Sellingparts.css" title="style" />
+    <link rel="stylesheet" type="text/css" href="sellingparts.css" title="style" />
+
 </head>
-<body>
-    <div class="header">
-        <h1><span class="highlight">M</span>otor<span class="highlight">H</span>aven</h1>
+<body id="body">
+    <div id="header">
+        <h1 id="header-title"><span id="highlight">M</span>otor<span id="highlight">H</span>aven</h1>
     </div>
 
-    <div class="nav">
-        <a href="homepage.html">Home</a>
-        <a href="Filter page.html">Find Parts</a>
-        <a href="Selling parts.html">Sell Parts</a>
-        <a href="Guides&Resources.html">Guide</a>
-        <a href="AboutUsPage.html">Contact</a>
+    <div id="nav">
+        <a id="nav-home" href="homepage.html">Home</a>
+        <a id="nav-find" href="Filter page.html">Find Parts</a>
+        <a id="nav-sell" href="Selling parts.html">Sell Parts</a>
+        <a id="nav-guide" href="Guides&Resources.html">Guide</a>
+        <a id="nav-contact" href="AboutUsPage.html">Contact</a>
     </div>
 
-    <div class="container">
+    <div id="container">
         <p id="prompt">Please fill out the form below to list your car part for sale on Motorhaven.</p>
 
-        <form action="#" method="post">
-            <div class="form-group">
-                <label for="part-name">Part Name:</label>
-                <input type="text" id="part-name" name="part-name" required placeholder="Enter the name of the part">
+        <form id="form" action="#" method="post">
+            <div id="form-group-part-name" class="form-group">
+                <label id="label-part-name" for="part-name">Part Name:</label>
+                <input id="input-part-name" type="text" name="part-name" required placeholder="Enter the name of the part">
             </div>
 
-            <div class="form-group">
-                <label for="category">Part Category:</label>
-                <select id="category" name="category" required>
+            <div id="form-group-category" class="form-group">
+                <label id="label-category" for="category">Part Category:</label>
+                <select id="select-category" name="category" required>
                     <option value="" disabled selected>Select the category</option>
                     <option value="engine">Engine</option>
                     <option value="transmission">Transmission</option>
@@ -42,14 +43,14 @@
                 </select>
             </div>
 
-            <div class="form-group">
-                <label for="make-model-year">Compatible Make, Model, Year:</label>
-                <input type="text" id="make-model-year" name="make-model-year" required placeholder="e.g., Toyota Corolla 2015">
+            <div id="form-group-make-model-year" class="form-group">
+                <label id="label-make-model-year" for="make-model-year">Compatible Make, Model, Year:</label>
+                <input id="input-make-model-year" type="text" name="make-model-year" required placeholder="e.g., Toyota Corolla 2015">
             </div>
 
-            <div class="form-group">
-                <label for="condition">Condition:</label>
-                <select id="condition" name="condition" required>
+            <div id="form-group-condition" class="form-group">
+                <label id="label-condition" for="condition">Condition:</label>
+                <select id="select-condition" name="condition" required>
                     <option value="" disabled selected>Select the condition</option>
                     <option value="new">New</option>
                     <option value="used">Used</option>
@@ -87,6 +88,5 @@
             <button type="submit" class="btn">Submit Listing</button>
         </form>
     </div>
-
 </body>
 </html>
