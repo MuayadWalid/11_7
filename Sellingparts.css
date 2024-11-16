@@ -59,18 +59,18 @@ body {
     color: #ccc;
 }
 
-#form {
+.form {
     margin-top: 20px;
 }
 
-#form label {
+.form label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
     color: #fff;
 }
 
-#form input, #form select, #form textarea {
+.form input, .form select, .form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -81,7 +81,7 @@ body {
     color: #fff;
 }
 
-#form input:focus, #form select:focus, #form textarea:focus {
+.form input:focus, .form select:focus, .form textarea:focus {
     border-color: #fff;
     outline: none;
     background-color: #555;
@@ -130,4 +130,35 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     font-size: 15pt;
+}
+
+/* This is for the find parts page */
+
+#form-title{
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: gray;
+    margin-top: 0px;
+    padding: 20px 0;
+}
+
+.button {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 40%;
+	flex: 1;
+	margin-left:10px;
+	text-align: center;
+    font-size: 16px;
+    display: inline;
+}
+
+.button:hover {
+    background-color: red;
+    color:#ccc;
 }
