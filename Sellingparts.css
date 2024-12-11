@@ -357,3 +357,27 @@ body {
 .hidden {
     display: none;
 }
+
+.hidden {
+    display: none;
+}
+
+.read-more-btn {
+    background-color: transparent;
+    color: blue;
+    text-decoration: underline;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.read-more-btn:hover {
+    color: grey;
+    transform: scale(1.05);
+}
+
+.read-more-btn:active {
+    color: rgb(140, 6, 6);
+    transform: scale(1);
+}
