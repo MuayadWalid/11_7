@@ -253,7 +253,7 @@ body {
 .main {
     width: 80%;
     margin: 20px auto;
-    background-color: #444;
+    background-color: rgba(51, 51, 51, 0.9);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
