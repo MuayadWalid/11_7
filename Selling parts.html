@@ -6,6 +6,63 @@
     <link rel="stylesheet" type="text/css" href="Sellingparts.css" title="style" />
 
 </head>
+    <script>
+    function updateCharCount() {
+    const description = document.getElementById("description");
+    const charCount = document.getElementById("charCount");
+    charCount.textContent = `${description.value.length}/300 characters`;
+}
+
+const partDetails = {
+engine: {
+    image: "engine.jpg",
+    text: "Are you referring to an engine like this?"
+},
+transmission: {
+    image: "transmission.jpg", 
+    text: "Are you referring to a transmission system like this?"
+},
+suspension: {
+    image: "suspension.jpg",
+    text: "Are you referring to a suspension system like this?"
+},
+brakes: {
+    image: "brakes.jpg", 
+    text: "Are you referring to brakes like these?"
+},
+exhaust: {
+    image: "exhaust.jpg", 
+    text: "Are you referring to an exhaust system like this?"
+},
+electrical: {
+    image: "electrical.jpg", 
+    text: "Are you referring to an electrical component like this?"
+},
+body: {
+    image: "body.jpg", 
+    text: "Are you referring to a body part like this?"
+},
+interior: {
+    image: "interior.jpg", 
+    text: "Are you referring to an interior part like this?"
+}
+};
+
+function showPartImage() {
+const category = document.getElementById('select-category').value;
+const previewContainer = document.getElementById('partPreview');
+const partImage = document.getElementById('partImage');
+const partText = document.getElementById('partText');
+
+if (category && partDetails[category]) {
+    partImage.src = partDetails[category].image;
+    partText.textContent = partDetails[category].text;
+    previewContainer.style.display = 'block';
+} else {
+    previewContainer.style.display = 'none';
+}
+}
+</script>
 <body>
     <div class="header">
         <h1 class="header-title"><span class="highlight">M</span>otor<span class="highlight">H</span>aven</h1>
@@ -29,18 +86,23 @@
             </div>
 
             <div id="form-group-category" class="form-group">
-                <label id="label-category" for="category">Part Category:</label>
-                <select id="select-category" name="category" required>
-                    <option value="" disabled selected>Select the category</option>
-                    <option value="engine">Engine</option>
-                    <option value="transmission">Transmission</option>
-                    <option value="suspension">Suspension</option>
-                    <option value="brakes">Brakes</option>
-                    <option value="exhaust">Exhaust</option>
-                    <option value="electrical">Electrical</option>
-                    <option value="body">Body</option>
-                    <option value="interior">Interior</option>
-                </select>
+            <label id="label-category" for="category">Part Category:</label>
+            <select id="select-category" name="category" required onchange="showPartImage()">
+                <option value="" disabled selected>Select the category</option>
+                <option value="engine">Engine</option>
+                <option value="transmission">Transmission</option>
+                <option value="suspension">Suspension</option>
+                <option value="brakes">Brakes</option>
+                <option value="exhaust">Exhaust</option>
+                <option value="electrical">Electrical</option>
+                <option value="body">Body</option>
+                <option value="interior">Interior</option>
+            </select>
+            </div>
+            
+            <div id="partPreview" style="margin-top: 20px; text-align: center; display: none;">
+            <img id="partImage" src="" alt="Part Preview" style="width: 150px; height: auto; margin-bottom: 10px;">
+            <p id="partText"></p>
             </div>
 
             <div id="form-group-make-model-year" class="form-group">
@@ -65,7 +127,8 @@
 
             <div class="form-group">
                 <label for="description">Description:</label>
-                <textarea id="description" name="description" rows="5" required placeholder="Enter a detailed description of the part"></textarea>
+                <textarea id="description" name="description" rows="5" required placeholder="Enter a detailed description of the part" oninput="updateCharCount()" maxlength="300"></textarea>
+                <div id="charCount">0/300 characters</div>
             </div>
 
             <div class="form-group">
