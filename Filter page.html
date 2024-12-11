@@ -30,51 +30,35 @@
         <a id="nav-contact" href="AboutUsPage.html">About Us</a>
     </div>
 
-<p>Welcome to MotorHeaven's Car Parts Finder! Here, you can easily filter through our vast selection of car 
-parts to find exactly what you need. Whether you're looking for engine components, transmission parts, or 
-anything in between, we've got you covered. Simply choose your car's make, model, year, and the part category, 
-and we'll show you all available options. You can also search by part name or number and filter results by condition 
-to find new, used, or refurbished parts. Start exploring and get your vehicle back in top shape with MotorHeaven!</p>
-
     <h2 id="form-title">Use the filter to find your needs</h2>
 
     <div class="container">    
         <form id="form" action=" " method="POST">
-            <!-- Make/Brand -->
             <div class="form-group">
                 <label>Select Make/Brand:</label>
-                <select id="make" name="make" autofocus>
+                <select id="make" name="make" onchange="filterModels()" autofocus>
+                    <option value="" selected>Select Car Brand</option>
                     <option value="ford">Ford</option>
                     <option value="chevrolet">Chevrolet</option>
                     <option value="toyota">Toyota</option>
                     <option value="honda">Honda</option>
                     <option value="nissan">Nissan</option>
                     <option value="bmw">BMW</option>
-                    <option value=" " selected>Select Car Brand</option>
                 </select>
             </div>
                         
-            <!-- Model -->
+
             <div class="form-group">
                 <label for="model">Select Model:</label>
                 <select id="model" name="model">
-                    <option value="mustang">Mustang</option>
-                    <option value="camaro">Camaro</option>
-                    <option value="corolla">Corolla</option>
-                    <option value="civic">Civic</option>
-                    <option value="altima">Altima</option>
-                    <option value="m3">M3</option>
-                    <option value=" " selected>Select Car Model</option>
                 </select>
             </div>
         
-            <!-- Year -->
             <div class="form-group">
                 <label>Please enter the manufacturing year of your car:</label>    
                 <input type="year" placeholder="Enter the car manufacturing year">
             </div>
             
-            <!-- Part Category -->
             <div class="form-group">
                 <label for="category">Select Part Category:</label>
                 <select id="category" name="category" onchange="showTutorialLink()">
@@ -88,10 +72,9 @@ to find new, used, or refurbished parts. Start exploring and get your vehicle ba
                 </select>
             </div>
 
-            <!-- Tutorial Link -->
+
             <div id="tutorial-link" class="tutorial-link"></div>
             
-            <!-- Condition -->
             <div class="form-group">
                 <label for="condition">Select Condition:</label>
                 <select id="condition" name="condition">
@@ -101,13 +84,12 @@ to find new, used, or refurbished parts. Start exploring and get your vehicle ba
                 </select>
             </div>
 
-            <!-- Search by Part Name or Number -->
             <div class="form-group">
                 <label for="search">Search Parts:</label>
                 <input type="text" id="search" name="search" placeholder="Enter part name or number">
             </div>
             
-            <!-- Price Range -->
+
             <div class="form-group">
                 <label>Choose a suitable price range:</label>
                 <input type="range" name="range" min="0" max="10000">
@@ -119,6 +101,40 @@ to find new, used, or refurbished parts. Start exploring and get your vehicle ba
     </div>
     
     <script>
+        const modelsByMake = {
+            ford: ["Mustang", "F-150", "Explorer"],
+            chevrolet: ["Camaro", "Silverado", "Tahoe"],
+            toyota: ["Corolla", "Camry", "RAV4"],
+            honda: ["Civic", "Accord", "CR-V"],
+            nissan: ["Altima", "Rogue", "Sentra"],
+            bmw: ["M3", "X5", "Z4"]
+        };
+
+        function filterModels() {
+            const make = document.getElementById("make").value;
+            const modelSelect = document.getElementById("model");
+
+
+            modelSelect.innerHTML = "";
+
+
+            const placeholderOption = document.createElement("option");
+            placeholderOption.value = "";
+            placeholderOption.textContent = "Select Car Model";
+            placeholderOption.selected = true;
+            modelSelect.appendChild(placeholderOption);
+
+
+            if (make && modelsByMake[make]) {
+                modelsByMake[make].forEach(model => {
+                    const option = document.createElement("option");
+                    option.value = model.toLowerCase();
+                    option.textContent = model;
+                    modelSelect.appendChild(option);
+                });
+            }
+        }
+
         function showTutorialLink() {
             const category = document.getElementById("category").value;
             const tutorialLink = document.getElementById("tutorial-link");
