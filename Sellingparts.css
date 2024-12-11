@@ -9,7 +9,9 @@ body {
     background-attachment: fixed; 
     background-position: center;
 }
-
+#charCount{
+    text-align: right;
+}
 .header {
     color: white;
     padding: 20px 0px 40px;
