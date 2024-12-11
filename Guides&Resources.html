@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <title>Guides & Resources - Motor Heaven</title>
     <link rel="stylesheet" type="text/css" href="Sellingparts.css"/>
+    <script src="Guides&Resources.js"></script>
 </head>
 <body>
  <div class="header">
@@ -15,18 +16,17 @@
         <a href="Guides&Resources.html">Guide</a>
         <a href="AboutUsPage.html">About Us</a>
     </div>
+    <div class="main">
     <h2>Buying Guides</h2>
     <p>Learn how to evaluate car parts, avoid scams, and get the best deals when buying car parts on Motor Heaven.</p>
     <h3>How to Avoid Scams When Buying Car Parts</h3>
-    <p>When buying car parts, it’s crucial to verify the authenticity of both the seller and the product. Here are some tips:</p>
-
-    <ul>
-        <li><strong>Research the seller:</strong> Check reviews and ratings to ensure they are trustworthy.</li>
-        <li><strong>Request detailed photos:</strong> Make sure the seller provides clear images from multiple angles.</li>
-        <li><strong>Check return policies:</strong> Always make sure the seller offers a clear return or refund policy in case the part isn’t as described.</li>
-        <li><strong>Use secure payment methods:</strong> Avoid direct bank transfers; opt for secure platforms like PayPal.</li>
-    </ul>
-           
+    <p>Watch this video for tips!</p>
+    <div class="guidesvid">
+        <video width="320" height="240" controls>
+            <source src="videos/avoidscams.mp4" type="video/mp4">
+        </video>
+    </div>
+    
     <h3>Getting the Best Deals on Car Parts</h3>
     <p>To get the best prices, it’s important to shop smart:</p>
     <ul>
@@ -75,7 +75,7 @@
         <form action="" method="post">
             <label>Car Make:</label>
             <input type="text" id="car-make" name="carmake" placeholder="e.g, Toyota" required><br><br>
-        
+            
             <label>Car Model:</label>
             <input type="text" id="car-model" name="carmodel" placeholder="e.g, Corolla" required><br><br>
     
@@ -91,7 +91,7 @@
                 <option value="electrical">Electrical</option>
                 <option value="body">Body</option>
                 <option value="interior">Interior</option>
-            </select><br><br>
+            </select>  <br><br>
             <label>Budget Range:</label>
             <input type="number" id="budget" name="budget" min="0" step="0.01" placeholder="Enter amount in USD"><br><br>
                    
@@ -99,6 +99,8 @@
             <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Provide any additional details..."></textarea><br><br>
             <input type="submit" value="Submit" class="btn">
         </form>
+        <div class="helpText" id="helpText"></div>
+        
         <h2>Frequently Asked Questions (FAQ)</h2>
                 
         <h3>How Does Motor Heaven Work?</h3>
@@ -113,6 +115,8 @@
         <h3>How Do I Return a Purchased Part?</h3>
         <p>If a part isn’t as described or doesn’t fit your vehicle, you can initiate a return by contacting the seller directly through Motor Heaven’s messaging system.</p>
 
-        <p>&copy; 2024 Motor Heaven. All rights reserved.</p>
+       
+     <p>&copy; 2024 Motor Heaven. All rights reserved.</p>
+    </div>
 </body>
 </html>
