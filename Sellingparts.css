@@ -407,14 +407,14 @@ body {
 
 #tipText{
     background-color: #333;
-    animation-name: border-animation;
+    animation-name: border-animation1;
     animation-duration: 2s;
     animation-delay: 0s;
     animation-iteration-count: infinite; /*try infinite*/
     animation-timing-function: linear;
 }
 
-@keyframes border-animation {
+@keyframes border-animation1 {
     0% {border-left: 5px groove white; border-top: 5px groove #333; border-right: 5px groove #444; border-bottom: 5px groove white;}
     25% {border-left: 5px groove #444; border-top: 5px groove #555; border-right: 5px groove white; border-bottom: 5px groove white;}
     50% {border-left: 5px groove #444; border-top: 5px groove white; border-right: 5px groove white; border-bottom: 5px groove #444;}
