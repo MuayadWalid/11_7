@@ -386,3 +386,21 @@ body {
     color: rgb(140, 6, 6);
     transform: scale(1);
 }
+.guidesvid {
+    background-color: whitesmoke;  
+    padding: 1em;                  
+    width: 20em;            
+    margin: 0 auto;                
+    border-radius: 8px;            
+}
+
+.helpText {
+    background-color: #444;
+    color: whitesmoke;
+    width: 20em;               
+    border-radius: 25px;
+    text-align: center;
+    display: block;            
+    margin: 0 auto;            
+    padding: 0.5em;           
+}
